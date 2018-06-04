@@ -1,0 +1,34 @@
+.sourceLine {
+  background: #2c2c27;
+  color: #f8f8f0;
+
+  .lineContent {
+    color: black;
+
+    &.diffContent {
+      color: #f8f8f0;
+      .hl_identifier {
+        color: #66d9ef;
+      }
+
+      .hl_string {
+        color: #e6db74;
+      }
+    }
+
+    .hl_keyword {
+      color: #66d9ef;
+    }
+
+    &.ediffChangedB {
+      .hl_keyword {
+        color: #e6db74;
+      }
+      background-color: green;
+    }
+
+    .hl_numeric {
+      color: #ae81ff;
+    }
+  }
+}

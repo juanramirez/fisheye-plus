@@ -1,0 +1,46 @@
+{
+  "name": "Fisheye-plus",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Fisheye/Crucible, with steroids.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/background/background.html",
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Fisheye Plus",
+    "default_popup": "src/popup/popup.html"
+  },
+  "permissions": [
+    "management",
+    "notifications",
+    "activeTab",
+    "tabs",
+    "storage",
+    "alarms",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "src/inject/look-and-feel.js"
+      ]
+    }
+  ],
+  "applications": {
+    "gecko": {
+      "id": "fisheye-plus@fisheye-plus.org"
+    }
+  }
+}
